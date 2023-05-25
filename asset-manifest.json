@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cheburek-frontend/static/css/main.7e2d9214.css",
-    "main.js": "/cheburek-frontend/static/js/main.e39d0aea.js",
+    "main.js": "/cheburek-frontend/static/js/main.045f2444.js",
     "index.html": "/cheburek-frontend/index.html",
     "main.7e2d9214.css.map": "/cheburek-frontend/static/css/main.7e2d9214.css.map",
-    "main.e39d0aea.js.map": "/cheburek-frontend/static/js/main.e39d0aea.js.map"
+    "main.045f2444.js.map": "/cheburek-frontend/static/js/main.045f2444.js.map"
   },
   "entrypoints": [
     "static/css/main.7e2d9214.css",
-    "static/js/main.e39d0aea.js"
+    "static/js/main.045f2444.js"
   ]
 }
