@@ -14,7 +14,6 @@ export default function EditProduct() {
     }, []);
  
     function getProducts() {
-        console.log(5);
         axios.get(`https://dimdey.live/dev/api/${id}`).then(function(response) {
             console.log(response.data);
             setInputs(response.data);

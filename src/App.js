@@ -18,11 +18,11 @@ function App() {
         </div>
       </header>
 
-      <BrowserRouter>
+      <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
         <Link to="product/create" className="btn btn-success">Add New Product</Link>
 
         <Routes>
-          <Route index element={<ListProduct />} />
+          <Route index path="/" element={<ListProduct />} />
           <Route path="product/create" element={<CreateProduct />} />
           <Route path="product/:id/edit" element={<EditProduct />} />
         </Routes>
