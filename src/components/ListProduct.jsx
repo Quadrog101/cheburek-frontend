@@ -28,7 +28,7 @@ export default function ListProduct() {
             <div className="d-flex flex-wrap">
                 {products.map((product, key) => (
                     <div className="card" key={key}>
-                        <img src="/img/cheburek_logo.png" width={150} height={150} alt="noimg"></img>
+                        <img src="img/cheburek_logo.png" width={150} height={150} alt="noimg"></img>
                         <h5>{product.name}</h5>
                         <p>{product.description}</p>
                         <div className="d-flex justify-between align-center">
