@@ -10,19 +10,12 @@ function App() {
 
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
-          <img src="/img/cheburek_logo.png" width={70} height={70}></img>
+          <img src="cheburek-frontend/img/cheburek_logo.png" width={70} height={70}></img>
           <div>
             <h3 className="text-uppercase">Cheburek World</h3>
             <p className="opacity-5">Магазин самых вкусных чебуреков</p>
           </div>
         </div>
-        <ul className="d-flex">
-          <li className="mr-30">
-            <img src="/img/cart.svg" width={18} height={18}></img>
-            <span>1234 руб.</span>
-          </li>
-          <li><img src="/img/user.svg" width={18} height={18}></img></li>
-        </ul>
       </header>
 
       <BrowserRouter>
