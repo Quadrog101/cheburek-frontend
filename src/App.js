@@ -1,8 +1,13 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ListProduct from './components/ListProduct';
+import CreateProduct from './components/CreateProduct';
+import EditProduct from './components/EditProduct';
 
 function App() {
   return (
     <div className="wrapper clear">
+
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
           <img src="/img/cheburek_logo.png" width={70} height={70}></img>
@@ -19,65 +24,18 @@ function App() {
           <li><img src="/img/user.svg" width={18} height={18}></img></li>
         </ul>
       </header>
-      <div className="content p-40">
-        <h1 className="mb-40">Все чебуреки</h1>
 
-        <div className="d-flex">
-          <div className="card">
-            <img src="/img/cheburek_logo.png" width={150} height={150} alt="noimg"></img>
-            <h5>Чебурек классический</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Цена:</span>
-                <b>129 руб.</b>
-              </div>
-              <button className="button">
-                <img src="/img/plus.svg" width={15} height={15} alt="noimg"></img>
-              </button>
-            </div>
-          </div>
-          <div className="card">
-            <img src="/img/cheburek_logo.png" width={150} height={150} alt="noimg"></img>
-            <h5>Чебурек классический</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Цена:</span>
-                <b>129 руб.</b>
-              </div>
-              <button className="button">
-                <img src="/img/plus.svg" width={15} height={15} alt="noimg"></img>
-              </button>
-            </div>
-          </div>
-          <div className="card">
-            <img src="/img/cheburek_logo.png" width={150} height={150} alt="noimg"></img>
-            <h5>Чебурек классический</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Цена:</span>
-                <b>129 руб.</b>
-              </div>
-              <button className="button">
-                <img src="/img/plus.svg" width={15} height={15} alt="noimg"></img>
-              </button>
-            </div>
-          </div>
-          <div className="card">
-            <img src="/img/cheburek_logo.png" width={150} height={150} alt="noimg"></img>
-            <h5>Чебурек классический</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Цена:</span>
-                <b>129 руб.</b>
-              </div>
-              <button className="button">
-                <img src="/img/plus.svg" width={15} height={15} alt="noimg"></img>
-              </button>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+      <BrowserRouter>
+        <Link to="product/create" className="btn btn-success">Add New Product</Link>
+
+        <Routes>
+          <Route index element={<ListProduct />} />
+          <Route path="product/create" element={<CreateProduct />} />
+          <Route path="product/:id/edit" element={<EditProduct />} />
+        </Routes>
+      </BrowserRouter>
+      
+
     </div>
   );
 }
