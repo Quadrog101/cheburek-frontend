@@ -15,7 +15,7 @@ export default function CreateProduct() {
     const handleSubmit = (event) => {
         event.preventDefault();
  
-        axios.post('http://quadrog.rf.gd/dev/api/', inputs).then(function(response){
+        axios.post('https://dimdey.live/dev/api/', inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });

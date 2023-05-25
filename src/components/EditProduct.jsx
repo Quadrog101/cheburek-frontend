@@ -14,7 +14,7 @@ export default function EditProduct() {
     }, []);
  
     function getProducts() {
-        axios.get(`http://quadrog.rf.gd/dev/api/${id}`).then(function(response) {
+        axios.get(`https://dimdey.live/dev/api/${id}`).then(function(response) {
             console.log(response.data);
             setInputs(response.data);
         });
@@ -28,7 +28,7 @@ export default function EditProduct() {
     const handleSubmit = (event) => {
         event.preventDefault();
  
-        axios.put(`http://quadrog.rf.gd/dev/api/${id}/edit`, inputs).then(function(response){
+        axios.put(`https://dimdey.live/dev/api/${id}/edit`, inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });

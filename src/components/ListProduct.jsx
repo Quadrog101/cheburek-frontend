@@ -9,14 +9,14 @@ export default function ListProduct() {
     }, []);
  
     function getProducts() {
-        axios.get('http://quadrog.rf.gd/dev/api/').then(function(response) {
+        axios.get('https://dimdey.live/dev/api/').then(function(response) {
             console.log(response.data);
             setProducts(response.data);
         });
     }
  
     const deleteProduct = (id) => {
-        axios.delete(`http://quadrog.rf.gd/dev/api/${id}/`).then(function(response){
+        axios.delete(`https://dimdey.live/dev/api/${id}/`).then(function(response){
             console.log(response.data);
             getProducts();
         });
