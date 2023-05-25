@@ -17,7 +17,7 @@ export default function CreateProduct() {
  
         axios.post('https://dimdey.live/dev/api/', inputs).then(function(response){
             console.log(response.data);
-            navigate('/');
+            navigate(`${process.env.PUBLIC_URL}`);
         });
          
     }

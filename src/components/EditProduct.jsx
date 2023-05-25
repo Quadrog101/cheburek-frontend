@@ -30,7 +30,7 @@ export default function EditProduct() {
  
         axios.put(`https://dimdey.live/dev/api/${id}/edit`, inputs).then(function(response){
             console.log(response.data);
-            navigate('/');
+            navigate(`/${process.env.PUBLIC_URL}`);
         });
          
     }
