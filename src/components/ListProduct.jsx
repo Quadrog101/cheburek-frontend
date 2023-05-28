@@ -24,8 +24,9 @@ export default function ListProduct() {
 
     return (
         <div className="ss">
-            <h1>Чебуреки</h1>
-            <div className="d-flex flex-wrap">
+            <div className='text-center'><Link to="product/create" className="btn btn-success">Add New Product</Link></div>
+            <h1 className="text-center">Чебуреки</h1>
+            <div className="d-flex flex-wrap products">
                 {products.map((product, key) => (
                     <div className="card" key={key}>
                         <img src="https://dimdey.live/dev/images/cheburek_logo.png" width={150} height={150} alt="noimg"></img>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
  
 export default function EditProduct() {
     const navigate = useNavigate();
@@ -36,6 +36,7 @@ export default function EditProduct() {
     }
     return (
         <div className="edit-block">
+            <div className='text-center'><Link to="/" className="btn btn-success">Back</Link></div>
             <h1>Edit product</h1>
             <form onSubmit={handleSubmit}>
                 <div className="edit-block__row">

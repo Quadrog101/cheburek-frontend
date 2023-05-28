@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
  
 export default function CreateProduct() {
     const navigate = useNavigate();
@@ -23,6 +23,7 @@ export default function CreateProduct() {
     }
     return (
         <div className="create-block">
+            <div className='text-center'><Link to="/" className="btn btn-success">Back</Link></div>
             <h1>Create product</h1>
             <form onSubmit={handleSubmit}>
                 <div className="create-block__row">
