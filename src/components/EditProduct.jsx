@@ -23,7 +23,7 @@ export default function EditProduct() {
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        setInputs(values => ({...values, [name]: value}));
+        setInputs({...inputs, [name]: value});
     }
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -35,27 +35,23 @@ export default function EditProduct() {
          
     }
     return (
-        <div className="row">
-            <div className="col-2"></div>
-            <div className="col-8">
+        <div className="edit-block">
             <h1>Edit product</h1>
             <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label>Name</label>
-                  <input type="text" value={inputs.name} className="form-control" name="name" onChange={handleChange} />
+                <div className="edit-block__row">
+                    <label>Name</label>
+                    <input type="text" value={inputs.name} className="form-control" name="name" onChange={handleChange} />
                 </div>
-                <div className="mb-3">
-                  <label>Price</label>
-                  <input type="text" value={inputs.price} className="form-control" name="price" onChange={handleChange} />
+                <div className="edit-block__row">
+                    <label>Price</label>
+                    <input type="text" value={inputs.price} className="form-control" name="price" onChange={handleChange} />
                 </div>
-                <div className="mb-3">
-                  <label>Description</label>
-                  <input type="text" value={inputs.description} className="form-control" name="description" onChange={handleChange} />
+                <div className="edit-block__row">
+                    <label>Description</label>
+                    <input type="text" value={inputs.description} className="form-control" name="description" onChange={handleChange} />
                 </div>    
                 <button type="submit" name="update" className="btn btn-primary">Save</button>
             </form>
-            </div>
-            <div className="col-2"></div>
         </div>
     )
 }
